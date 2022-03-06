@@ -12,3 +12,5 @@ implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
 
 // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson
 runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+online rsa key generator devglan.com a gir. 2048 bit olarak oluştur ve applicaion.properties e gir.
