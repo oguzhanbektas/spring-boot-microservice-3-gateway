@@ -17,12 +17,12 @@ public class TransactionService implements ITransactionService {
     }
 
     @Override
-    public JsonElement saveProduct(JsonElement requestBody) {
+    public JsonElement saveTransaction(JsonElement requestBody) {
         return RetrofitUtils.executeInBlock(transactionServiceRequest.saveTransaction(requestBody));
     }
 
     @Override
-    public void deleteProduct(Long productId) {
+    public void deleteTransaction(Long productId) {
         RetrofitUtils.executeInBlock(transactionServiceRequest.deleteTransaction(productId));
     }
 
