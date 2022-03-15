@@ -41,5 +41,14 @@ public class RetrofitConfiguration {
 
     }
 
+    @Bean
+    public IProductServiceRequest productServiceRequest(Retrofit.Builder secureKeyBuilder,
+                                                        @Value("${product.service.url}") String baseUrl) {
+        return secureKeyBuilder
+                .baseUrl(baseUrl)
+                .build()
+                .create(IProductServiceRequest.class);
+    }
+
 
 }
