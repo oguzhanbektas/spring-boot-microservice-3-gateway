@@ -82,7 +82,7 @@ public class JwtProvider implements IJwtProvider {
     }
 
     @Override
-    public boolean validateToken(HttpServletRequest request) {
+    public boolean isTokenValid(HttpServletRequest request) {
         String token = resolveToken(request);
         if (token == null) {
             return false;
