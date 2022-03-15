@@ -1,5 +1,5 @@
 {
-  "name": "sha-microservice-gateway",
+  "name": "sha-microservice-3-gateway",
   "buildpacks": [
     {
       "url": "heroku/gradle"
