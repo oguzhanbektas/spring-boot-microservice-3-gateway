@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -32,6 +31,6 @@ public class GsonHttpMessageConfig {
     public GsonHttpMessageConverter gsonHttpMessageConverter(Gson gson) {
         GsonHttpMessageConverter converter = new GsonHttpMessageConverter();
         converter.setGson(gson);
-        return converter
+        return converter;
     }
 }
