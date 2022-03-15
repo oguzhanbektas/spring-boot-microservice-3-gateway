@@ -2,6 +2,7 @@ package com.sha.springbootmicroservice3gateway.service;
 
 import com.sha.springbootmicroservice3gateway.model.User;
 import com.sha.springbootmicroservice3gateway.repository.IUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -12,14 +13,11 @@ import java.util.Optional;
 @Service
 public class UserService implements IUserService {
 
+    @Autowired
     private IUserRepository userRepository;
 
+    @Autowired
     private PasswordEncoder passwordEncoder;
-
-    public UserService(IUserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     @Override
     public User saveUser(User user) {
